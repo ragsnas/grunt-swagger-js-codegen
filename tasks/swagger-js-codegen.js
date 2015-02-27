@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                         if (api.type === 'angular' || api.angularjs === true) {
                             source = CodeGen.getAngularCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });
                         } else if (api.custom === true) {
-                            source = CodeGen.getCustomCode({ className: api.className, template: api.template, swagger: swagger });
+                            source = CodeGen.getCustomCode({ moduleName: api.moduleName, className: api.className, template: api.template, swagger: swagger });
                         } else {
                             source = CodeGen.getNodeCode({ className: api.className, swagger: swagger });
                         }
